@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="https://google.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Logos/LightModeLogo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Royal Pets</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="landing_page_intro">
+          <div class="navbar">
+            <img src="./images/LightModeLogo-removebg-preview.png" alt="site logo" class="logo">
+            <div class="navbar_items">
+              <ul class="navbar_list">
+                <li>
+                  <div class="dropdown">
+                    <button
+                      class="border-0 dropdown-toggle link-color"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      style="background:none ;"
+                    >
+                      Food
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#all" onclick="allProducts()">All</a>
+                      <a class="dropdown-item" href="#dog" onclick="dogProducts()">Dogs</a>
+                      <a class="dropdown-item" href="#cat" onclick="catProducts()">Cats</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="#accessories" class="link_item link-color" onclick="petAccessories()">Pet Accessories</a>
+                </li>
+                <li>
+                  <a href="#all" class="link_item link-color">Shop</a>
+                </li>
+                <li>
+                  <a href="#footer" class="link_item link-color">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_menu">
+              <div class="cart">
+                <img
+                  src="./images/shoppingBag.png"
+                  alt="shopping bag"
+                  class="shopping_bag"
+                  data-toggle="modal"
+                  data-target="#modalCart"
+                >
+              </div>
+              <img src="./images/hamMenu.png" alt="menu" class="mobile_menu_icon">
+            </div>
+          </div>
+          <hr>
+          <div class="intro_section_container">
+            <div class="intro_section">
+              <div class="intro_section_illastration">
+                <div class="intro_section_description">
+                  <h1 class="description_title">
+                    Buy For Your Pet Whatever Its Need
+                  </h1>
+                  <p class="sub_descrition">
+                    Lets get real,you don't have to be a Veterinary Nutritionist
+                    to know good food.But it's nice to have one on staff
+                  </p>
+                  <button class="description_btn">Browse All Products</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="store_characteristics">
+          <div class="characteristics">
+            <h2 class="characteristics_title">
+              What Makes Us Different From Others?
+            </h2>
+            <p class="characteristics_description">
+              Healthy and Fun Frozen Yougurt Snacks it's playtime meets snacks
+              time when you freeze everybody's favorite health food into
+              colorful monsters
+              <br>
+              <br>
+              Legos the sky's the limit with inexpensive silicone molds and a
+              little imagination!
+            </p>
+            <button class="learnMore_btn">Learn More</button>
+          </div>
+          <!-- <marquee behavior="pause" direction=""> -->
+          <div class="store_advantages">
+            <div class="advantage">
+              <img src="./images/freeShipping.png" alt="freeShipping" class="advantage_img">
+              <h3 class="advantage_title">Free Shipping</h3>
+              <p class="advantage_description">
+                Free shipping all over Lebanon
+              </p>
+            </div>
+            <div class="advantage">
+              <img src="./images/customer-support.png" alt="customer-support" class="advantage_img">
+              <h3 class="advantage_title">24/7 support</h3>
+              <p class="advantage_description">
+                Contact us by email at support@royalpets.com
+              </p>
+            </div>
+            <div class="advantage">
+              <img src="./images/approval.png" alt="Productsapproval" class="advantage_img">
+              <h3 class="advantage_title">Quality Products</h3>
+              <p class="advantage_description">Quality products</p>
+            </div>
+            <div class="advantage">
+              <img src="./images/-guarantee.png" alt="guarantee" class="advantage_img">
+              <h3 class="advantage_title">Guarantee</h3>
+              <p class="advantage_description">
+                Free shipping all over Lebanon
+              </p>
+            </div>
+          </div>
+          <!-- </marquee> -->
+        </div>
+        <div class="store_products">
+          <div class="store_products_intro">
+            <h2 class="store_products_title">
+              Get the valuable needs of latest products
+            </h2>
+            <p class="store_products_description">
+              Healthy and fun frozen yogurt snacks it's playtime meets snack
+              time when you freeze everybody's favorite health.
+            </p>
+          </div>
+          <div class="products_filtering">
+            <button class="filterBtn all_products checked" id="all">All Products</button>
+            <button class="filterBtn cat_products" id="cat">Cat Food</button>
+            <button class="filterBtn dog_products" id="dog">Dog Food</button>
+            <button class="filterBtn pet_accessories" id="accessories">Pet Accessories</button>
+          </div>
+          <div class="products_list ">
+            <div class="product dog">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/nutritions.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Dog Nutritions</p>
+                <div class="product_pricing">
+                  <p class="price">$40</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product dog">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/meatJerky.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Jerky Chicken</p>
+                <div class="product_pricing">
+                  <p class="price">$12</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product cat">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/beefpea.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Beef & pea</p>
+                <div class="product_pricing">
+                  <p class="price">$32</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product cat">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/HappydogLamm_reis.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Happy dog meal</p>
+                <div class="product_pricing">
+                  <p class="price">$30</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product accessories">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/dogHarness.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Dog Support Harness</p>
+                <div class="product_pricing">
+                  <p class="price">$150</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product accessories">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/groomingGloves.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Grooming Gloves</p>
+                <div class="product_pricing">
+                  <p class="price">$150</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product accessories">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/dreamspoobag5.webp" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Poo bag</p>
+                <div class="product_pricing">
+                  <p class="price">$5</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="product accessories">
+              <div class="heart_icon_div">
+                <button class="add_to_fav">
+                  <img src="./images/heart-svgrepo-com.svg" alt="heart-icon" class="heart_icon">
+                </button>
+              </div>
+              <img src="./images/poopholder.png" alt="product" class="product_image">
+              <hr class="product_seperator">
+              <div class="product_info">
+                <p class="product_name">Poop bag holder</p>
+                <div class="product_pricing">
+                  <p class="price">$7</p>
+                  <button class="add_to_cart" data-toggle="modal" data-target="#modalCart">
+                    <img src="./images/plus-sign.png" alt="plus sign" class="plus_sign">
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="load_more_div">
+            <button class="load_moreBtn">Load More</button>
+          </div>
+        </div>
+        <div class="newsletter_Subscription">
+          <img src="./images/newsLetterbg-removebg-preview.png" alt="img" class="rightDiv_img">
+          <div class="email_form">
+            <h2 class="store_products_title newsletter_title">
+              Best online pet product ecommerce service in your area.
+            </h2>
+            <p class="store_products_description newsletter_description">
+              Get update of every new product added in or any kind of discount
+              offer in our website.
+            </p>
+            <form action="" class="newsForm">
+              <input type="email" class="email" placeholder="Enter your Email">
+              <button class="load_moreBtn">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+        <footer class="footer_container" id="footer">
+          <div class="logo_div">
+            <img src="./images/LightModeLogo-removebg-preview.png" alt="logo" class="footer_logo">
+          </div>
+          <div class="contact_info_container">
+            <div class="contact_info">
+              <div class="location contact">
+                <div class="location_header contact_header">
+                  <img src="https://img.icons8.com/ios/32/000000/marker--v1.png" alt="icon" class="location_icon contact_icon">
+                  <p class="location_title contact_title">Location</p>
+                </div>
+                <div class="location_info">
+                  <p class="address cc_info">Beirut,Lebanon</p>
+                  <a href="#" class="maps_location cc_info">Check Location</a>
+                </div>
+              </div>
+              <div class="contact">
+                <div class="contact_header">
+                  <img src="https://img.icons8.com/windows/32/000000/phone.png" alt="icon" class="contact_icon">
+                  <p class="contact_title">Contact Us</p>
+                </div>
+                <div class="contact_us">
+                  <p class="cc_info">(961) 05-030-405</p>
+                  <p class="cc_info">(961) 70-123-321</p>
+                </div>
+              </div>
+              <div class="contact">
+                <div class="contact_header">
+                  <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/32/000000/external-email-communication-nawicon-detailed-outline-nawicon.png" alt="icon" class="contact_icon">
+                  <p class="contact_title">Email</p>
+                </div>
+                <div class="support_info">
+                  <p class="cc_info">support@royalpets.com</p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="contact_info social">
+              <div class="contact">
+                <div class="contact_header">
+                  <p class="contact_title">Our Products</p>
+                </div>
+                <div class="support_info">
+                  <a href="">
+                    <p class="cc_info">For Dog</p>
+                  </a>
+                  <a href="">
+                    <p class="cc_info">For Cats</p>
+                  </a>
+                  <a href="">
+                    <p class="cc_info">Pet Accessories</p>
+                  </a>
+                </div>
+              </div>
+              <div class="contact">
+                <div class="contact_header">
+                  <p class="contact_title">Community</p>
+                </div>
+                <div class="support_info">
+                  <a href="">
+                    <p class="cc_info">News &amp; Stories</p>
+                  </a>
+                  <a href="">
+                    <p class="cc_info">About Us</p>
+                  </a>
+                  <a href="">
+                    <p class="cc_info">Contact Us</p>
+                  </a>
+                  <a href="">
+                    <p class="cc_info">FAQ</p>
+                  </a>
+                </div>
+              </div>
+              <div class="contact">
+                <div class="contact_header">
+                  <p class="contact_title">Social</p>
+                </div>
+                <div class="support_info social_info">
+                  <a href="">
+                    <div class="social_icons">
+                      <img src="https://img.icons8.com/color/28/000000/facebook-new.png">
+                      <p class="cc_info">Facebook</p>
+                    </div>
+                  </a>
+                  <a href="">
+                    <div class="social_icons">
+                      <img src="https://img.icons8.com/fluency/24/000000/instagram-new.png">
+                      <p class="cc_info">Instagram</p>
+                    </div>
+                  </a>
+                  <a href="">
+                    <div class="social_icons">
+                      <img src="https://img.icons8.com/color/48/000000/twitter--v1.png">
+                      <p class="cc_info">Twitter</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+    <!-- Modal: modalCart -->
+    <div
+      class="modal fade"
+      id="modalCart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <!--Body-->
+          <div class="modal-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product name</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal: modalCart -->
+    <script src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $('.filterBtn').click(function () {
+        $('.filterBtn').removeClass('checked');
+        $(this).addClass('checked');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="https://google.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Logos/LightModeLogo-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Royal Pets</title>
+  </head>
+  <body style="background-color:#eef2f5;">
+    <main>
+      <div>
+        <div class="landing_page_intro">
+          <div class="navbar">
+            <a href="index.html">
+            <img src="./images/LightModeLogo-removebg-preview.png" alt="site logo" class="logo">
+            </a>
+            <div class="navbar_items">
+              <ul class="navbar_list">
+                <li>
+                  <div class="dropdown">
+                    <button
+                      class="border-0 dropdown-toggle link-color"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      style="background:none ;"
+                    >
+                      Food
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="index.html#all" onclick="allProducts()">All</a>
+                      <a class="dropdown-item" href="index.html#dog" onclick="dogProducts()">Dogs</a>
+                      <a class="dropdown-item" href="index.html#cat" onclick="catProducts()">Cats</a>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="index.html#accessories" class="link_item link-color" onclick="petAccessories()">Pet Accessories</a>
+                </li>
+                <li>
+                  <a href="index.html#all" class="link_item link-color">Shop</a>
+                </li>
+                <li>
+                  <a href="#footer" class="link_item link-color">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mobile_menu">
+              <div class="cart">
+                <img
+                  src="./images/shoppingBag.png"
+                  alt="shopping bag"
+                  class="shopping_bag"
+                  data-toggle="modal"
+                  data-target="#modalCart"
+                >
+              </div>
+              <img src="./images/hamMenu.png" alt="menu" class="mobile_menu_icon">
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrapper">
+            <div class="form-container ">
+              <h1 class="form-title">New Customer</h1>
+              <p class="form-parag">Create an account now and enjoy shopping with us</p>
+              <button class="form-btn">
+                Create an account
+              </button>
+            </div>
+            <div class="form-container">
+              <h1 class="form-title">Login</h1>
+              <p class="form-parag">Login to your account to start ordering!</p>
+              <form action="#" class="login-form">
+                <div class="form-fields">
+                  <label for="email">E-Mail</label>
+                  <input type="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-fields">
+                  <label for="password">Password</label>
+                  <input type="password" placeholder="Enter Your Password">
+                </div>
+                <button class="form-btn">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+          <footer class="footer_container" id="footer">
+            <a href="index.html" class="logo_div">
+              <img src="./images/LightModeLogo-removebg-preview.png" alt="logo" class="footer_logo">
+            </a>
+            <div class="contact_info_container">
+              <div class="contact_info">
+                <div class="location contact">
+                  <div class="location_header contact_header">
+                    <img src="https://img.icons8.com/ios/32/000000/marker--v1.png" alt="icon" class="location_icon contact_icon">
+                    <p class="location_title contact_title">Location</p>
+                  </div>
+                  <div class="location_info">
+                    <p class="address cc_info">Beirut,Lebanon</p>
+                    <a href="#" class="maps_location cc_info">Check Location</a>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact_header">
+                    <img src="https://img.icons8.com/windows/32/000000/phone.png" alt="icon" class="contact_icon">
+                    <p class="contact_title">Contact Us</p>
+                  </div>
+                  <div class="contact_us">
+                    <p class="cc_info">(961) 05-030-405</p>
+                    <p class="cc_info">(961) 70-123-321</p>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact_header">
+                    <img src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/32/000000/external-email-communication-nawicon-detailed-outline-nawicon.png" alt="icon" class="contact_icon">
+                    <p class="contact_title">Email</p>
+                  </div>
+                  <div class="support_info">
+                    <p class="cc_info">support@royalpets.com</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="contact_info social">
+                <div class="contact">
+                  <div class="contact_header">
+                    <p class="contact_title">Our Products</p>
+                  </div>
+                  <div class="support_info">
+                    <a href="">
+                      <p class="cc_info">For Dog</p>
+                    </a>
+                    <a href="">
+                      <p class="cc_info">For Cats</p>
+                    </a>
+                    <a href="">
+                      <p class="cc_info">Pet Accessories</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact_header">
+                    <p class="contact_title">Community</p>
+                  </div>
+                  <div class="support_info">
+                    <a href="">
+                      <p class="cc_info">News &amp; Stories</p>
+                    </a>
+                    <a href="">
+                      <p class="cc_info">About Us</p>
+                    </a>
+                    <a href="">
+                      <p class="cc_info">Contact Us</p>
+                    </a>
+                    <a href="">
+                      <p class="cc_info">FAQ</p>
+                    </a>
+                  </div>
+                </div>
+                <div class="contact">
+                  <div class="contact_header">
+                    <p class="contact_title">Social</p>
+                  </div>
+                  <div class="support_info social_info">
+                    <a href="">
+                      <div class="social_icons">
+                        <img src="https://img.icons8.com/color/28/000000/facebook-new.png">
+                        <p class="cc_info">Facebook</p>
+                      </div>
+                    </a>
+                    <a href="">
+                      <div class="social_icons">
+                        <img src="https://img.icons8.com/fluency/24/000000/instagram-new.png">
+                        <p class="cc_info">Instagram</p>
+                      </div>
+                    </a>
+                    <a href="">
+                      <div class="social_icons">
+                        <img src="https://img.icons8.com/color/48/000000/twitter--v1.png">
+                        <p class="cc_info">Twitter</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+       <!-- Modal: modalCart -->
+    <div
+    class="modal fade"
+    id="modalCart"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Your cart</h4>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Product name</th>
+                <th>Qty</th>
+                <th>Price</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal: modalCart -->
+      <script src="./app.js"></script>
+    </body>
+  </html>
